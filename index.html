@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#10213f">
+<title>HIKO Quotation Studio</title>
+<style>
+:root{--navy:#10213f;--navy2:#1d3968;--gold:#c7a34a;--gold-soft:#f8f3e5;--bg:#f5f7fa;--card:#fff;--text:#172033;--muted:#6d7686;--line:#e4e8ee;--danger:#b42318;--green:#13795b;--shadow:0 8px 28px rgba(16,33,63,.07)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}button,input,select{font:inherit}button{cursor:pointer}.app{max-width:1120px;margin:auto;padding:0 16px 36px}.topbar{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:18px max(16px,calc((100vw - 1120px)/2 + 16px));box-shadow:0 5px 22px rgba(16,33,63,.16)}.brand{display:flex;align-items:center;justify-content:space-between;gap:12px}.logo{font-size:27px;font-weight:900;letter-spacing:2px}.tag{font-size:10px;letter-spacing:.8px;border:1px solid rgba(255,255,255,.3);padding:6px 9px;border-radius:99px;color:#f0d47e}.topbar h1{font-size:23px;line-height:1.2;margin:17px 0 4px}.topbar p{margin:0;color:#dbe2ee;font-size:13px}.layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,.88fr);gap:18px;margin-top:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:20px}.section-title{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:17px}.section-title h2{font-size:16px;margin:0}.eyebrow{font-size:10px;font-weight:800;color:var(--gold);letter-spacing:1px;text-transform:uppercase}.field{margin-bottom:14px}label{display:block;font-size:11px;font-weight:800;color:#4d5665;margin-bottom:7px;letter-spacing:.2px}input,select{width:100%;height:46px;border:1px solid #d7dce4;border-radius:11px;background:#fff;color:var(--text);padding:0 12px;outline:none;font-size:14px}input:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(199,163,74,.14)}.two{display:grid;grid-template-columns:1fr 1fr;gap:11px}.seg{display:grid;grid-template-columns:1fr 1fr;gap:7px}.seg button{min-height:44px;border:1px solid #d9dee6;background:#fff;color:#4d5665;border-radius:10px;font-weight:700;font-size:13px}.seg button.active{background:var(--navy);color:#fff;border-color:var(--navy)}.hint{font-size:11px;color:var(--muted);margin-top:6px;line-height:1.4}.primary{width:100%;height:48px;border:0;border-radius:11px;background:var(--navy);color:#fff;font-weight:800;font-size:14px;margin-top:4px}.primary:hover{background:var(--navy2)}.secondary{height:40px;border:1px solid var(--line);background:#fff;border-radius:10px;padding:0 13px;color:var(--navy);font-weight:700}.hidden{display:none!important}.cart-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px}.count{font-size:11px;color:var(--muted);background:#f1f3f7;padding:5px 8px;border-radius:99px}.empty{border:1px dashed #ccd3de;border-radius:13px;padding:26px 16px;text-align:center;color:var(--muted);font-size:13px}.empty b{display:block;color:var(--text);margin-bottom:4px}.item{border:1px solid var(--line);border-radius:13px;padding:13px;margin-bottom:9px;background:#fff}.item-main{display:flex;justify-content:space-between;gap:12px}.item-name{font-weight:800;font-size:13px;line-height:1.35}.item-meta{font-size:11px;color:var(--muted);line-height:1.45;margin-top:4px}.item-price{text-align:right;white-space:nowrap;font-weight:800;font-size:13px}.item-actions{display:flex;align-items:center;gap:7px;margin-top:10px}.qtybox{display:flex;align-items:center;border:1px solid var(--line);border-radius:9px;overflow:hidden;height:34px}.qtybox button{width:32px;height:34px;border:0;background:#f7f8fa;color:var(--navy);font-weight:800}.qtybox span{min-width:32px;text-align:center;font-size:12px}.linkbtn{border:0;background:transparent;color:var(--navy);font-size:11px;font-weight:700;padding:7px}.linkbtn.delete{color:var(--danger);margin-left:auto}.summary{border-top:1px solid var(--line);margin-top:14px;padding-top:14px}.sumrow{display:flex;justify-content:space-between;gap:16px;font-size:13px;padding:6px 0}.sumrow.muted{color:var(--muted)}.sumrow.total{font-size:17px;font-weight:900;color:var(--navy);padding-top:11px;margin-top:5px;border-top:1px solid var(--line)}.discount-row{display:grid;grid-template-columns:1fr 100px;gap:10px;align-items:center;margin:10px 0}.discount-row label{margin:0}.discount-row input{height:40px;text-align:right}.customer{margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}.actions{display:grid;grid-template-columns:1fr;gap:9px;margin-top:15px}.action{height:45px;border-radius:10px;font-weight:800;font-size:13px}.action.print{background:var(--navy);color:#fff;border:0}.action.wa{background:#fff;color:var(--green);border:1px solid #b9ddcf}.note{font-size:10px;color:var(--muted);text-align:center;margin-top:10px;line-height:1.4}.toast{position:fixed;left:50%;bottom:20px;transform:translate(-50%,20px);background:var(--navy);color:#fff;padding:11px 15px;border-radius:10px;font-size:12px;opacity:0;pointer-events:none;transition:.2s;z-index:99;box-shadow:0 8px 25px rgba(0,0,0,.2)}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:800px){.layout{grid-template-columns:1fr}.app{padding:0 12px 28px}.card{padding:16px;border-radius:15px}.topbar{padding:16px 14px}.topbar h1{font-size:20px}.logo{font-size:25px}.layout{margin-top:12px}.summary-card{order:2}.builder-card{order:1}.actions{grid-template-columns:1fr 1fr}.sticky{position:sticky;bottom:8px;background:rgba(245,247,250,.94);backdrop-filter:blur(8px);padding-top:8px;z-index:10}}
+@media(max-width:460px){.two{grid-template-columns:1fr}.actions{grid-template-columns:1fr}.tag{display:none}.item-main{gap:7px}.item-price{font-size:12px}}
+@media print{body{background:#fff}.topbar,.builder-card,.actions,.note,.discount-row label,.discount-row input,.count,.item-actions{display:none!important}.app{max-width:none;padding:0}.layout{display:block;margin:0}.summary-card{box-shadow:none;border:0;padding:0}.summary-card .section-title{margin-bottom:18px}.item{break-inside:avoid}.summary{break-inside:avoid}.print-only{display:block!important}}
+.print-only{display:none}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="logo">HIKO</div><div class="tag">QUOTATION STUDIO</div></div>
+  <h1>Wardrobe Accessories</h1>
+  <p>Build a quotation by adding as many products as you need.</p>
+</header>
+
+<main class="app">
+<div class="layout">
+<section class="card builder-card">
+  <div class="section-title"><div><div class="eyebrow">01 · Add product</div><h2>Product details</h2></div></div>
+
+  <div class="field">
+    <label>PRODUCT TYPE</label>
+    <div class="seg"><button id="customBtn" class="active" type="button">Customisable</button><button id="fixedBtn" type="button">Fixed size</button></div>
+  </div>
+
+  <div class="field"><label>PRODUCT</label><select id="product"></select></div>
+
+  <div class="field" id="finishField"><label>FINISH</label><select id="finish"><option value="mocha">Mocha</option><option value="ht">Harma / Tiffany</option></select></div>
+
+  <div class="field" id="modeField">
+    <label>CUSTOMISATION</label>
+    <div class="seg"><button id="completeBtn" class="active" type="button">Complete product</button><button id="trayBtn" type="button">Tray</button></div>
+  </div>
+
+  <div class="field" id="widthField"><label id="widthLabel">CARCASS WIDTH (MM)</label><input id="width" type="number" min="600" max="1000" step="1" value="750"><div class="hint" id="widthHint">Enter the required carcass width.</div></div>
+
+  <div class="field"><label>QUANTITY</label><input id="qty" type="number" min="1" step="1" value="1"></div>
+
+  <div class="pricebox" style="background:var(--gold-soft);border:1px solid #eadfbf;border-radius:12px;padding:13px;margin:5px 0 14px">
+    <div class="eyebrow" style="color:#806b2d">UNIT PRICE</div>
+    <div id="unitPrice" style="font-size:25px;font-weight:900;color:var(--navy);margin-top:3px">₹0</div>
+    <div id="priceNote" class="hint">Inclusive of GST.</div>
+  </div>
+
+  <button id="addBtn" class="primary" type="button">+ Add to quotation</button>
+</section>
+
+<section class="card summary-card">
+  <div class="cart-head"><div><div class="eyebrow">02 · Quotation</div><h2 style="font-size:16px;margin:0">Your quotation</h2></div><div class="count" id="count">0 items</div></div>
+
+  <div id="empty" class="empty"><b>No products added yet</b>Add your first product above. You can add as many different products as you need.</div>
+  <div id="items"></div>
+
+  <div class="summary">
+    <div class="sumrow"><span>Subtotal</span><b id="subtotal">₹0</b></div>
+    <div class="discount-row"><label>Overall discount (%)</label><input id="discount" type="number" min="0" max="100" step="0.01" value="0"></div>
+    <div class="sumrow muted"><span>Discount</span><b id="discountAmt">₹0</b></div>
+    <div class="sumrow total"><span>Grand total</span><span id="grandTotal">₹0</span></div>
+  </div>
+</div>
+
+  <div class="actions sticky">
+    <button class="action print" id="printBtn" type="button">Generate PDF</button>
+  </div>
+  <div class="note">Prices are inclusive of GST. This quotation is generated from the HIKO price data loaded in this tool.</div>
+</section>
+</div>
+</main>
+<div id="toast" class="toast"></div>
+
+<script>
+const DATA={
+"Aluminium Jewellery Box":{"600":[9208,9450],"750":[11422,11624],"900":[12102,12317]},
+"Leather Jewellery Box":{"600":[8705,8936],"750":[10528,10714],"900":[10968,11157]},
+"Underwear Box":{"600":[9451,9682],"750":[11227,11416],"900":[11913,12106]},
+"2 Inch Storage Box":{"600":[8046,8273],"750":[9355,9611],"900":[9590,9849]},
+"3 Inch Storage Box":{"600":[8609,8835],"750":[10140,10396],"900":[10498,10758]},
+"6 Inch Storage Box":{"600":[9334,9575],"750":[10977,11246],"900":[11585,11859]},
+"9 Inch Storage Box":{"600":[10059,10934],"750":[11813,12840],"900":[12671,13774]},
+"Leather Multipurpose Box":{"600":[8874,9105],"750":[10568,10827],"900":[11248,11511]},
+"Trouser Rack":{"600":[6560,6810],"750":[8034,8326],"900":[8163,8463]},
+"Glass Basket":{"600":[8997,9197],"750":[10559,10782],"900":[10923,11157]},
+"Sheet Shoe Rack":{"600":[8666,8894],"750":[10098,10354],"900":[10474,10738]},
+"Wire Shoe Rack":{"600":[7441,7657],"750":[8588,8838],"900":[8958,9212]},
+"Wire Basket":{"600":[8007,8222],"750":[9406,9646],"900":[9752,9994]}
+};
+const FIXED={
+"Adjustable Jewellery Box 750":{size:"750 MM • 714 × 380 × 52 mm",prices:[6054,6402]},
+"Adjustable Jewellery Box 900":{size:"900 MM • 864 × 380 × 52 mm",prices:[6653,7068]},
+"3 Cabinet Box":{size:"900 MM • 860 × 360 × 140 mm",prices:[9274,9596]},
+"6 Cabinet Box":{size:"900 MM • 860 × 360 × 210 mm",prices:[17579,18002]},
+"Side Slide Hanger":{size:"600 MM • 370 × 455 × 120 mm",prices:[4766,null],htOnRequest:true},
+"Double Side Mount Hanger":{size:"750 MM • 620 × 455 × 120 mm",prices:[5567,null],htOnRequest:true},
+"Center Mount Hanger":{size:"600 MM • 325 × 455 × 160 mm",prices:[4890,null],htOnRequest:true},
+"Top Mount C Hanger":{size:"600 MM • 120 × 455 × 125 mm",prices:[4252,null],htOnRequest:true},
+"Rotating Round Clothes Rack 605":{size:"605 MM • 605 × 605 × 2010 mm",prices:[12385,null],htOnRequest:true},
+"Rotating Round Clothes Rack 705":{size:"705 MM • 705 × 705 × 2010 mm",prices:[13471,null],htOnRequest:true},
+"Tree Corner Rack":{size:"705 MM • 705 × 705 × 2010 mm",prices:[12566,null],htOnRequest:true},
+"Multi-Use Box 1":{size:"390 × 190 × 56 mm",prices:[2085,2144]},
+"Multi-Use Box 2":{size:"390 × 190 × 56 mm",prices:[2085,2144]},
+"Multi-Use Box 3":{size:"390 × 190 × 56 mm",prices:[2085,2144]},
+"Rotating Shoe Rack (6 Stack)":{size:"900 MM • 700 × 360 × 1120–1220 mm",prices:[26208,null],htOnRequest:true},
+"Rotating Shoe Rack (12 Stack)":{size:"900 MM • 700 × 360 × 1930–2030 mm",prices:[36228,null],htOnRequest:true},
+"Iron Board":{size:"300 × 400 × 150 mm",prices:[9066,null],htOnRequest:true},
+"Single Soft Pull Down Lifter 600–830":{size:"600–830 MM • 600 × 830 × 840 mm",prices:[4604,null],htOnRequest:true},
+"Single Soft Pull Down Lifter 830–1100":{size:"830–1100 MM • 830 × 1150 × 840 mm",prices:[4604,null],htOnRequest:true},
+"Automatic Watch Winder Box 600":{size:"600 MM • 560 × 350 × 230 mm",prices:[111177,109869]},
+"Automatic Watch Winder Box 900":{size:"900 MM • 860 × 350 × 230 mm",prices:[129056,127538]},
+"Safe Box 600":{size:"600 MM • 564 × 400 × 150 mm",prices:[30899,30536]},
+"Safe Box 800":{size:"800 MM • 764 × 400 × 150 mm",prices:[38130,37681]}
+};
+let productType='custom',mode='complete',cart=[],editingIndex=-1;
+const $=id=>document.getElementById(id);
+const product=$('product'),finish=$('finish'),width=$('width'),qty=$('qty'),discount=$('discount');
+const money=n=>new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0}).format(Math.round(n));
+const finishName=()=>finish.value==='mocha'?'Mocha':'Harma / Tiffany';
+function populateProducts(){const source=productType==='custom'?Object.keys(DATA):Object.keys(FIXED);product.innerHTML='';source.forEach(p=>{let o=document.createElement('option');o.value=p;o.textContent=p;product.appendChild(o)});if(productType==='custom'&&source.includes('Leather Jewellery Box'))product.value='Leather Jewellery Box';updateBuilder()}
+function setType(t){productType=t;$('customBtn').classList.toggle('active',t==='custom');$('fixedBtn').classList.toggle('active',t==='fixed');$('modeField').classList.toggle('hidden',t==='fixed');$('widthField').classList.toggle('hidden',t==='fixed');populateProducts();}
+function setMode(m){mode=m;$('completeBtn').classList.toggle('active',m==='complete');$('trayBtn').classList.toggle('active',m==='tray');width.min=m==='tray'?438:600;width.max=1000;width.value=m==='tray'?600:750;$('widthLabel').textContent=m==='tray'?'TRAY WIDTH (MM)':'CARCASS WIDTH (MM)';$('widthHint').textContent=m==='tray'?'Enter the required tray width.':'Enter the required carcass width.';updateBuilder()}
+function currentPrice(){const idx=finish.value==='mocha'?0:1;if(productType==='fixed')return FIXED[product.value].prices[idx]??null;const d=DATA[product.value],w=Number(width.value);if(!w)return null;if(mode==='complete'){if(w<600||w>1000)return null;if(w===600)return d['600'][idx];if(w<=750)return d['750'][idx];if(w<=900)return d['900'][idx];return d['900'][idx]*1.20}if(w<438||w>1000)return null;if(w<=600)return d['600'][idx]-1000;if(w<=750)return d['750'][idx]-1000;if(w<=900)return d['900'][idx]-1000;return (d['900'][idx]-1000)*1.20}
+function basisText(){if(productType==='fixed')return FIXED[product.value].size;const w=Number(width.value);if(!w)return '—';return mode==='tray'?'Tray '+w+' mm':'Carcass '+w+' mm'}
+function priceIsOnRequest(){return productType==='fixed'&&FIXED[product.value].htOnRequest&&finish.value==='ht'}
+function updateBuilder(){const p=currentPrice();$('unitPrice').textContent=priceIsOnRequest()?'On Request':p===null?'—':money(p);$('priceNote').textContent=priceIsOnRequest()?'Please contact HIKO for this finish.':'Inclusive of GST.'}
+function addItem(){const p=currentPrice(),q=Math.max(1,parseInt(qty.value)||1);if(priceIsOnRequest()){toast('This finish is available on request.');return}if(p===null){toast('Please enter a valid size.');return}const item={type:productType,product:product.value,finish:finishName(),mode:productType==='fixed'?'Fixed':mode,basis:basisText(),unitPrice:p,qty:q};if(editingIndex>=0){cart[editingIndex]=item;editingIndex=-1;$('addBtn').textContent='+ Add to quotation';toast('Product updated')}else{cart.push(item);toast('Product added')}renderCart()}
+function editItem(i){const x=cart[i];productType=x.type;mode=x.mode==='Tray'?'tray':'complete';$('customBtn').classList.toggle('active',productType==='custom');$('fixedBtn').classList.toggle('active',productType==='fixed');$('modeField').classList.toggle('hidden',productType==='fixed');$('widthField').classList.toggle('hidden',productType==='fixed');populateProducts();product.value=x.product;finish.value=x.finish==='Mocha'?'mocha':'ht';if(productType==='custom'){setMode(mode);width.value=parseInt(x.basis.match(/\d+/)?.[0]||750)}qty.value=x.qty;editingIndex=i;$('addBtn').textContent='Update quotation item';window.scrollTo({top:0,behavior:'smooth'});updateBuilder()}
+function removeItem(i){cart.splice(i,1);renderCart();toast('Product removed')}
+function changeQty(i,delta){cart[i].qty=Math.max(1,cart[i].qty+delta);renderCart()}
+function renderCart(){const box=$('items');box.innerHTML='';$('count').textContent=cart.length+' '+(cart.length===1?'item':'items');$('empty').classList.toggle('hidden',cart.length>0);cart.forEach((x,i)=>{const amount=x.unitPrice*x.qty;const div=document.createElement('div');div.className='item';div.innerHTML='<div class="item-main"><div><div class="item-name">'+esc(x.product)+'</div><div class="item-meta">'+esc(x.finish)+' · '+esc(x.basis)+'</div></div><div class="item-price">'+money(amount)+'</div></div><div class="item-actions"><div class="qtybox"><button type="button" data-minus="'+i+'">−</button><span>'+x.qty+'</span><button type="button" data-plus="'+i+'">+</button></div><button class="linkbtn" type="button" data-edit="'+i+'">Edit</button><button class="linkbtn delete" type="button" data-delete="'+i+'">Remove</button></div>';box.appendChild(div)});box.querySelectorAll('[data-minus]').forEach(b=>b.onclick=()=>changeQty(+b.dataset.minus,-1));box.querySelectorAll('[data-plus]').forEach(b=>b.onclick=()=>changeQty(+b.dataset.plus,1));box.querySelectorAll('[data-edit]').forEach(b=>b.onclick=()=>editItem(+b.dataset.edit));box.querySelectorAll('[data-delete]').forEach(b=>b.onclick=()=>removeItem(+b.dataset.delete));updateSummary()}
+function updateSummary(){const sub=cart.reduce((s,x)=>s+x.unitPrice*x.qty,0),d=Math.min(100,Math.max(0,Number(discount.value)||0)),da=sub*d/100; $('subtotal').textContent=money(sub);$('discountAmt').textContent=money(da);$('grandTotal').textContent=money(sub-da)}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]))}
+function quotationNo(){return 'HQ-'+new Date().toISOString().slice(0,10).replace(/-/g,'')+'-'+String(Date.now()).slice(-4)}
+function generatePrint(){
+  if(!cart.length){toast('Add at least one product first.');return}
+  const sub=cart.reduce((s,x)=>s+x.unitPrice*x.qty,0),
+        d=Math.min(100,Math.max(0,Number(discount.value)||0)),
+        da=sub*d/100,
+        total=sub-da,
+        no=quotationNo();
+
+  const rows=cart.map((x,i)=>
+    '<tr><td>'+(i+1)+'</td><td><b>'+esc(x.product)+'</b><br><span>'+esc(x.finish)+' · '+esc(x.basis)+'</span></td><td>'+x.qty+'</td><td>'+money(x.unitPrice)+'</td><td class="r">'+money(x.unitPrice*x.qty)+'</td></tr>'
+  ).join('');
+
+  const html='<!doctype html><html><head><meta charset="utf-8"><title>HIKO Quotation '+no+'</title><style>'+
+  '@page{size:A4;margin:18mm}body{font-family:Arial,sans-serif;color:#172033;margin:0;font-size:12px}'+
+  '.head{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:3px solid #c7a34a;padding-bottom:15px}'+
+  '.logo{font-size:28px;font-weight:900;letter-spacing:2px;color:#10213f}.muted{color:#6d7686}'+
+  '.title{text-align:right}.title b{font-size:18px;color:#10213f}'+
+  'table{width:100%;border-collapse:collapse;margin-top:24px}th{background:#f4f6f9;color:#4d5665;text-align:left}'+
+  'th,td{padding:10px 8px;border-bottom:1px solid #e4e8ee;vertical-align:top}td span{color:#6d7686;font-size:10px}.r{text-align:right}'+
+  '.totals{margin:20px 0 0 auto;width:280px}.tr{display:flex;justify-content:space-between;padding:7px 0}'+
+  '.grand{border-top:1px solid #ddd;margin-top:4px;padding-top:11px;font-size:17px;font-weight:900;color:#10213f}'+
+  '.foot{margin-top:35px;color:#6d7686;font-size:10px;border-top:1px solid #e4e8ee;padding-top:10px}'+
+  '</style></head><body>'+
+  '<div class="head"><div><div class="logo">HIKO</div><div class="muted">Wardrobe Accessories</div></div>'+
+  '<div class="title"><b>QUOTATION</b><br><span class="muted">'+no+'</span><br><span class="muted">'+new Date().toLocaleDateString('en-IN')+'</span></div></div>'+
+  '<table><thead><tr><th>#</th><th>Product</th><th>Qty</th><th>Unit Price</th><th class="r">Amount</th></tr></thead><tbody>'+rows+'</tbody></table>'+
+  '<div class="totals"><div class="tr"><span>Subtotal</span><b>'+money(sub)+'</b></div>'+
+  '<div class="tr"><span>Discount ('+d+'%)</span><b>− '+money(da)+'</b></div>'+
+  '<div class="tr grand"><span>Grand Total</span><span>'+money(total)+'</span></div></div>'+
+  '<div class="foot">Prices are inclusive of GST. This quotation is generated from HIKO Wardrobe Accessories price data.</div>'+
+  '<script>window.onload=function(){window.print()}<\/script></body></html>';
+
+  const w=window.open('','_blank');
+  if(!w){toast('Please allow pop-ups for this site.');return}
+  w.document.write(html);
+  w.document.close();
+}
+function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');clearTimeout(window._toast);window._toast=setTimeout(()=>t.classList.remove('show'),1800)}
+$('customBtn').onclick=()=>setType('custom');$('fixedBtn').onclick=()=>setType('fixed');$('completeBtn').onclick=()=>setMode('complete');$('trayBtn').onclick=()=>setMode('tray');$('addBtn').onclick=addItem;$('printBtn').onclick=generatePrint;[product,finish,width,qty].forEach(x=>x.addEventListener('input',updateBuilder));[product,finish,width,qty].forEach(x=>x.addEventListener('change',updateBuilder));discount.addEventListener('input',updateSummary);
+setType('custom');setMode('complete');renderCart();
+</script>
+</body>
+</html>
